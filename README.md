@@ -56,10 +56,12 @@ Highlights = require 'highlights'
 highlighter = new Highlights()
 html = highlighter.highlightSync
   fileContents: 'var hello = "world";'
-  scopeName: 'source.js'
+  fileName: 'source.js'
 
 console.log html
 ```
+
+The options `fileContents` and `fileName` are required. `scopeName` is optional, and can be used to look up grammars that you have registered with `requireGrammars` or `requireGrammarsSync`.
 
 Outputs:
 
